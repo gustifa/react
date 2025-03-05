@@ -1,17 +1,17 @@
+
 const App = () => {
-  
-  const city = ['Dhaka', 'USA', 'Delhi', 'ID']
+  let status = true;
 
   return (
     <div>
-      <ul>
-        {
-          city.map((item, i)=>{
-
-            return <li key={i.toString}>{item}</li>
-          })
+      <h1>Login Status</h1>
+      {(()=>{
+        if (status == true) {
+          return <button>Logout</button>
+        }else{
+          return <button>Login</button>
         }
-      </ul>
+      })()}
     </div>
   );
 };
