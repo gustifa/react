@@ -1,17 +1,19 @@
 
 const App = () => {
-  let status = true;
+  
+  const PostFormData = (event)=> {
+    event.preventDefault();
+
+    alert('Form Submit')
+  }
 
   return (
     <div>
-      <h1>Login Status</h1>
-      {(()=>{
-        if (status == true) {
-          return <button>Logout</button>
-        }else{
-          return <button>Login</button>
-        }
-      })()}
+     <form onSubmit={PostFormData} action="">
+      <input type="text" placeholder="name" />
+      <button type="submit">SUbmit</button>
+     </form>
+
     </div>
   );
 };
